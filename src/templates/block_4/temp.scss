@@ -1,0 +1,59 @@
+.about{
+  width: 520px;
+  text-align: center;
+  h2{
+    background: url("../img/about_icon.png") no-repeat 50% 0;
+  }
+  textarea{
+    width: 100%;
+    margin-top: 10px;
+    height: 180px;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size:$font-size-textarea;
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+
+      text-align: left;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+
+      text-align: left;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+
+      text-align: left;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+
+      text-align: left;
+    }
+
+  }
+  input[type = 'button']{
+    display: none;
+  }
+  label{
+    width: 94px;
+    display: flex;
+    margin:75px auto;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 16px 32px;
+    background: $font-blue;
+    color: $white;
+    cursor: pointer;
+    transition: .5s;
+    &:hover{
+      background: $white;
+      color:$font-blue ;
+      box-shadow: 0 0 5px $font-blue;
+    }
+  }
+}
+@media screen and (max-width:790px){
+ .about{
+   width: 100%;
+  }
+}
+

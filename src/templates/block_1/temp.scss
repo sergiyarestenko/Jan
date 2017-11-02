@@ -1,0 +1,48 @@
+.info{
+  h2{
+    background: url("../img/info_icon.png") no-repeat 50% 0;
+  }
+
+  .form {
+    flex-direction: column;
+    margin:50px auto;
+input{
+  width: 520px;
+  margin:12px auto;
+
+}
+
+    select{
+      width: 320px;
+      margin:12px auto;
+
+    }
+
+  }
+}
+@media screen and (max-width:768px){
+  .info{
+    .form {
+      width: 100%;
+      input{
+        width: 80%;
+      }
+      select{
+      width: 80%;
+      }
+    }
+}
+}
+@media screen and (max-width:500px){
+  .info{
+    .form {
+      width: 100%;
+      input{
+        width: 90%;
+      }
+      select{
+      width: 90%;
+      }
+    }
+}
+}

@@ -1,14 +1,71 @@
 .header {
+  font-size:$font-size-menu;
+ul{
+  padding:0;
+  margin-top:35px;
+  margin-bottom:35px;
+  flex-direction: row;
+  justify-content:space-around;
+  li{
 
+    color: $font-blue;
+    &.active{
+      color: $font-main;
+    }
+  }
+  span{
+    display: none;
+  }
+}
 }
 
-@media screen and (max-width:1199px){
+@media screen and (max-width:768px){
 .header {
-  ul {
-    li {
-
-      padding-left: 50px;
+  position: relative;
+  ul{
+    position: fixed;
+    top:0;
+    left:-768px;
+    flex-direction: column;
+    background: $white;
+    z-index: 500;
+    margin:0;
+    transition: .5s;
+    padding:20px;
+    padding-bottom:35px;
+    &.open{
+      left:0;
+      box-shadow: 2px 2px 5px $font-blue;
+    }
+    li{
+      padding: 10px 0;
+    }
+    span{
+      display: inline-flex;
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-size:smaller;
+    }
   }
+
+
+.open-menu {
+  position: absolute;
+  top:20px;
+  left: 20px;
+  height: 52px;
+  width: 52px;
+  background: url('../img/menu-icon.png') no-repeat 50% 50%;
+  background-size: contain;
+  z-index: 10;
+  cursor: pointer;
+  &.open{
+    visibility: hidden;
+
+  }
+
 }
 
 }

@@ -1,0 +1,53 @@
+.exp{
+  h2{
+    background: url("../img/exp_icon.png") no-repeat 50% 0;
+  }
+
+  .row{
+    margin-top:40px;
+    margin-bottom:140px;
+    .column{
+      width: 33.3%;
+    }
+  }
+  input{
+    display: none;
+  }
+  label{
+    padding:5px 0;
+    &:before{
+      content: '';
+      display: inline-block;
+      width: 21px;
+      height: 21px;
+      border: 1px solid $font-blue;
+      border-radius: 2px;
+      transition: .5s;
+      margin-right: 13px;
+      position: relative;
+      top:.35em
+    }
+  }
+  input[type="checkbox"]:checked + label{
+
+    &:before{
+      background: $font-blue;
+    }
+  }
+}
+@media screen and (max-width:768px){
+  .exp{
+    .row{
+     flex-direction: column;
+      margin-bottom:50px;
+      .column{
+        width: 80%;
+        padding:0 10px;
+      }
+    }
+
+
+  }
+}
+
+

@@ -4,25 +4,144 @@
         <meta charset="UTF-8">
         <title>Test</title>
         <link rel="stylesheet" href="stylesheets/main.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700,800" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body >
-        <div class="container container-all">
-            <header class="header col-padding">
-              <div class="header-logo">
+        <div class="wrapper test">
+            <div class="header container">
+              <ul id ='menu'>
+                <li class="active">
+                  <a href="#info">
+                    Личная информация
+                  </a>
+                </li>
+                <li>
+                  <a href="#exp">
+                    Опыт
+                  </a>
+                </li>
+                <li>
+                  <a href="#js">
+                    JavaScript
+                  </a>
+                </li>
+                 <li>
+                  <a href="#about">
+                    О себе
+                  </a>
+                </li>
+                <span onclick="closeMenu()">закрыть</span>
+              </ul>
+              <span id="open-menu" class="open-menu"></span>
             
-              </div>
-            </header>
+            </div>
+            <div class="bg"></div>
+            <div>
+                <div class="container">
+                    <h1>Анкета</h1>
+                </div>
+            </div>
+            <div class="info container" id = "info">
+            
+                <h2>
+                    Личная информация
+                </h2>
+                <div class="form">
+                    <input type="text" id= 'name' placeholder="ФИО">
+                    <select name="" id="age">
+                        <option value="0" class = 'placeholder' hidden disabled selected>Год рождения</option>
+                        <option value="70">1970-1979</option>
+                        <option value="80">1980-1989</option>
+                        <option value="90">1990-1999</option>
+                        <option value="2000">2000-2009</option>
+                    </select>
+                    <input type="text" id = "city" placeholder="Место проживания">
+                    <input type="text" id = 'skype' placeholder="Skype">
+                    <input type="text" id = 'mail' placeholder="E-mail">
+            
+                </div>
+            </div>
+            <div class="exp container" id = "exp">
+            
+                <h2>
+                    Расскажите о своем опыте
+                </h2>
+               <div class="row">
+                   <div class="column">
+                       <input type="checkbox" name="oocss" id="oocss">
+                       <label for ="oocss">БЭМ/OOCSS</label>
+                       <input type="checkbox" name="sass" id="sass">
+                       <label for ="sass">Stylus/LESS/SASS</label>
+                      <input type="checkbox" name="svg" id="svg">
+                       <label for ="svg">Работаю с SVG</label>
+                   </div>
+                   <div class="column">
+                    <input type="checkbox" name="semantica" id="semantica">
+                       <label for ="semantica">Верстаю семантично</label>
+                      <input type="checkbox" name="es2015" id="es2015">
+                       <label for ="es2015">ES2015/ES2016</label>
+                       <input type="checkbox" name="gulp" id="gulp">
+                       <label for ="gulp">Gulp/GRUNT</label>
+                   </div>
+            
+                   <div class="column">
+                       <input type="checkbox" name="webpack" id="webpack">
+                       <label for ="webpack">Webpack</label>
+                       <input type="checkbox" name="jquery" id="jquery">
+                       <label for ="jquery">jQuery</label>
+                        <input type="checkbox" name="git" id="git">
+                       <label for ="git">Ипользую Git</label>
+                   </div>
+               </div>
+            </div>
+            <div class="js container fourth" id = "js">
+            
+                <h2>
+                    Уровень владения JavaScript
+                </h2>
+               <div class="row brown">
+                   <div>
+                       <p>Не владею</p>
+                   </div>
+                   <div>
+                       <p>Использую готовые решения</p>
+                   </div>
+                   <div>
+                       <p>Использую готовые решения и умею и переделывать</p>
+                   </div>
+                   <div>
+                       <p>Пишу сложный JS с нуля</p>
+                   </div>
+               </div>
+                <!--<input type="range" min="0" max="4" step="1" value="2">-->
+            
+            
+                <div id="slider" class = 'slider'>
+                    <div id="custom-handle" class="ui-slider-handle"></div>
+                </div>
+            
+            </div>
+            <div class="about container" >
+            
+                <h2>
+                    Расскажите о себе
+                </h2>
+                <p>
+                    Напишите несколько предложений, чем привлекла наша вакансия
+                    и что вы ожидаете от работы у нас.
+            
+                </p>
+                <textarea name="about" id = 'about' placeholder="Понравилась тем, что..."></textarea>
+                <label>Готово<input type="button" id ='submit'></label>
+            </div>
 
-            <footer class="footer col-padding">
-              <div class="footer-top">
-            
-              </div>
-            </footer>
+
         </div>
-    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="./js/app.js"></script>
+
     </body>
 </html>
