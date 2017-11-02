@@ -1,0 +1,45 @@
+html,
+body {
+  background: $white;
+  color: $grey;
+  font-family: $font-family-main;
+  font-size: $font-size-prime;
+  font-weight: 600;
+  z-index: 1;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+div,
+section,
+header,
+footer,
+form {
+  display: flex;
+}
+
+a, a:hover,a:active,
+a:visited,a:focus{
+  text-decoration: none;
+  color:inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+
+.container {
+  margin: 0 auto;
+  width: 1640px;
+  flex-direction: column;
+}
+
+.col-padding {
+  padding: 0 120px;
+}
